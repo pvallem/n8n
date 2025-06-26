@@ -117,6 +117,7 @@ export async function setupClientApiKeyAuthentication(
 			clientSecret?: string;
 			apiVersion: string;
 			endpoint?: string;
+			resourceName: string;
 		}>(credentialName);
 
 		if (!configCredentials.clientId || !configCredentials.clientSecret) {
@@ -142,7 +143,7 @@ export async function setupClientApiKeyAuthentication(
 
 		return {
 			azureOpenAIApiKey: fetchResponse.token,
-			azureOpenAIApiInstanceName: '',
+			azureOpenAIApiInstanceName: configCredentials.resourceName,
 			azureOpenAIApiVersion: configCredentials.apiVersion,
 			azureOpenAIEndpoint: configCredentials.endpoint,
 		};
