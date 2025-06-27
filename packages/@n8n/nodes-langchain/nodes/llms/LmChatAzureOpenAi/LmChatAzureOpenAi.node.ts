@@ -57,7 +57,7 @@ export class LmChatAzureOpenAi implements INodeType {
 		outputNames: ['Model'],
 		credentials: [
 			{
-				name: 'ciscoBridgeItAzureOpenAiClientApi',
+				name: 'azureOpenAiClientApi',
 				required: true,
 				displayOptions: {
 					show: {
