@@ -96,7 +96,7 @@ async function fetchApiKey(clientId: string, clientSecret: string): Promise<Fetc
 		await clientTokenManager.storeToken(clientId, data.access_token);
 		// Return the access token (or API key)
 		// @ts-ignore
-		return { error: null, data: data.access_token };
+		return { error: null, token: data.access_token };
 	} catch (error) {
 		console.error(error);
 		return {
@@ -115,9 +115,9 @@ export async function setupClientApiKeyAuthentication(
 		const configCredentials = await this.getCredentials<{
 			clientId?: string;
 			clientSecret?: string;
+			resourceName: string;
 			apiVersion: string;
 			endpoint?: string;
-			resourceName: string;
 		}>(credentialName);
 
 		if (!configCredentials.clientId || !configCredentials.clientSecret) {
