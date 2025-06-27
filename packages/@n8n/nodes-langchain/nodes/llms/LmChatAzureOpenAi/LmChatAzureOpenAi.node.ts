@@ -138,6 +138,7 @@ export class LmChatAzureOpenAi implements INodeType {
 			});
 			if (appKey !== '') {
 				model.user = JSON.stringify({ appkey: appKey });
+				this.logger.info(`Using appKey for Azure OpenAI: ${appKey}`);
 			}
 
 			this.logger.info(`Azure OpenAI client initialized for deployment: ${modelName}`);

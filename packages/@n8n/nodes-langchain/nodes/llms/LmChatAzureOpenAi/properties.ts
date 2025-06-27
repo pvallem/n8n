@@ -41,7 +41,7 @@ export const properties: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Model (Deployment) Name',
+		displayName: 'AI Model (Deployment) Name',
 		name: 'model',
 		type: 'string',
 		description: 'The name of the model(deployment) to use (e.g., gpt-4, gpt-35-turbo)',

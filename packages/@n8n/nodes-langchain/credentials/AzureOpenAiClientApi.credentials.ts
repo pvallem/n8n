@@ -3,7 +3,7 @@ import type { IAuthenticateGeneric, ICredentialType, INodeProperties } from 'n8n
 export class AzureOpenAiClientApi implements ICredentialType {
 	name = 'azureOpenAiClientApi';
 
-	displayName = 'Cisco Bridge It Azure Open AI Client Credentials';
+	displayName = 'Azure Open AI Client Credentials';
 
 	documentationUrl = 'azureopenai';
 
