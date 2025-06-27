@@ -11,7 +11,7 @@ export const properties: INodeProperties[] = [
 		displayName: 'Authentication',
 		name: 'authentication',
 		type: 'options',
-		default: AuthenticationType.ApiKey,
+		default: AuthenticationType.ClientApi,
 		options: [
 			{
 				name: 'API Key',
@@ -20,6 +20,10 @@ export const properties: INodeProperties[] = [
 			{
 				name: 'Azure Entra ID (OAuth2)',
 				value: AuthenticationType.EntraOAuth2,
+			},
+			{
+				name: 'Client API Key',
+				value: AuthenticationType.ClientApi,
 			},
 		],
 	},
