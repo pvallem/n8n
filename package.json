@@ -124,5 +124,8 @@
       "@lezer/highlight": "patches/@lezer__highlight.patch",
       "v-code-diff": "patches/v-code-diff.patch"
     }
+  },
+  "dependencies": {
+    "async-mutex": "^0.5.0"
   }
 }
